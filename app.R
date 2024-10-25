@@ -1,6 +1,6 @@
 # install.packages("shiny")
 library(shiny)
-
+# install.packages("remotes", repos = "https://cran.r-project.org")
 # library to install from Github
 # install.packages("remotes")
 # install shinyDarkmode

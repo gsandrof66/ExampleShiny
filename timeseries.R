@@ -14,6 +14,7 @@ df <- df |> select(-Lat, -Long) |>
   melt(id.vars = c(1,2), variable.name = "dates", value.name = "amount", variable.factor=F) |> 
   mutate(dates = as.IDate(dates, format = "%m/%d/%y")) |> 
   clean_names() |> 
+  dplyr::select(-country_region) |> 
   arrange(dates)
 
 ui <- fluidPage(
